@@ -42,8 +42,10 @@ from sklearn.decomposition import PCA
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-# Step 1: Load the dataset 
-data = pd.read_csv('HeightsWeights.csv')
+# Step 1: Load the dataset from a local file
+# Ensure the correct file path is provided where the dataset is saved
+url = "https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-ML0187EN-SkillsNetwork/labs/module%203/data/HeightsWeights.csv"
+data = pd.read_csv(url)
 
 # Step 2: Explore the data
 # Display the first few rows and column names for initial inspection
@@ -80,6 +82,7 @@ plt.xlabel("Principal Component 1")
 plt.ylabel("Principal Component 2")
 plt.title("PCA - Heights and Weights Dataset")
 plt.show()
+
 ```
 
 ## Output:
